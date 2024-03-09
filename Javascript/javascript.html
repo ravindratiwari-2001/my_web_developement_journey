@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Javascript Tips</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <h3>
+            <a href="../HTML/index.html" style="text-decoration: none;">HTML Tip💡</a>
+            <a href="../Git/git.html" style="text-decoration: none;">&nbsp;&nbsp;&nbsp;Git Tip💡</a>
+            <a href="javascript.html" style="text-decoration: none;">&nbsp;&nbsp;&nbsp;Javascript Tip💡</a>
+            <a href="../CSS/css.html" style="text-decoration: none;">&nbsp;&nbsp;&nbsp;CSS Tip💡</a>
+      </h3>
+      <h4>Top 60+ JavaScript Interview Questions and Answers</h4>
+      <p>
+            <pre>
+                  <b>Question:1 </b>
+                  <code>
+                        function add(item ,array){
+                              return array.push(item)
+                        }
+                        const result1 = add('a',['b','c'])
+                        console.log(result1);
+                  </code>
+                  Answer: 3
+                  Explanation:The push method modifies the original array by adding an element to it and returns the updated length of the array after the addition.
+
+            </pre>
+            <pre>
+                  <b>Question:2</b>
+                  <code>
+                        async function getValue(){
+                              return 'i love javascript'
+                        }
+                        const result2 = getValue();
+                        console.log(result2);
+                  </code>
+                  Answer : Promise {' i love javascript'}
+                  Explanation:Since getValue is an async function and returns a promise due to the use of the async keyword, the return value is a Promise object .
+
+            </pre>
+            <pre>
+                  <b>Question:3 </b>
+                  <code>
+                        async function getValue(){
+                              return 'i love javascript'
+                        }
+                        async function getResult(){
+                              const result = await getValue();
+                              console.log(result);
+                        }
+                        getResult();
+                  </code>
+                  Answer: i love javascript
+                  Explanation: If you want to retrieve the value from the Promise, you can use async/await or .then() to handle the resolved value .
+
+            </pre>
+            <pre>
+                  <b>Question:4 </b>
+                  <code>
+                        var x = 6;
+                        var y = 3;
+                        (x < 10 && y > 1)
+                  </code>
+                  Answer : true
+                  Explanation: The code snippet declares two variables x and y, assigns them values, and then uses a boolean expression to check if both conditions (x < 10 and y > 1) are true. The expression evaluates to true because both conditions are met.
+
+            </pre>
+            <pre>
+                  <b>Question:5 </b>
+                  <code>
+                        var x = 2 + 2 - '2';
+                        console.log(x)
+                  </code>
+                  Answer: 2
+                  Explanation: The expression starts with 2 + 2, which evaluates to 4.Then, '2' is included. It's a string, but JavaScript attempts to convert it to a number for the calculation(Type Coercion). When a string starts with a numerical digit, it's successfully coerced to a numerical value (in this case, 2).The coerced numerical value 2 is then subtracted from 4, resulting in 2.The final value 2 is assigned to the variable x.Last line outputs the value stored in x to the console. Since x holds 2, the console will display 2.
+                  
+            </pre>
+            <pre>
+                  <b>Question:6 </b>
+                  <code>
+                        var x = "2" + "2" - "2";
+                        console.log(x)
+                  </code>
+                  Answer: 20
+                  Explanation:"2" + "2" part concatenates (joins) the string values "2" and "2". It results in the string "22", as string concatenation takes precedence over arithmetic operations in JavaScript
+                  Since "22" is a string, and the minus sign (-) is for arithmetic operations, JavaScript attempts to convert the string to a number for the calculation2.(Type Conversion)It successfully converts "22" to the Number 22.22 - "2", Now we have a Number (22) and a String ("2"). JavaScript again attempts to convert the String "2" to a Number for the subtraction.It successfully converts "2" to the Number 2.The Number 22 is subtracted by Number 2.This results in the Number 20.The Number 20 is assigned to the variable x.Then final value of x, which is 20, is printed to the console.
+
+            </pre>
+      </p>
+</body>
+</html>
