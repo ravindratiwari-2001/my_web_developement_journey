@@ -9,10 +9,35 @@
 <body>
       <h3>
             <a href="../HTML/index.html" style="text-decoration: none;">HTML Tip💡</a>
-            <a href="../Git/git.html" style="text-decoration: none;">&nbsp;&nbsp;&nbsp;Git Tip💡</a>
-            <a href="javascript.html" style="text-decoration: none;">&nbsp;&nbsp;&nbsp;Javascript Tip💡</a>
             <a href="../CSS/css.html" style="text-decoration: none;">&nbsp;&nbsp;&nbsp;CSS Tip💡</a>
+            <a href="javascript.html" style="text-decoration: none;">&nbsp;&nbsp;&nbsp;Javascript Tip💡</a>
+            <a href="../Git/git.html" style="text-decoration: none;">&nbsp;&nbsp;&nbsp;Git Tip💡</a>
+            <a href="../20DaysOfReact/Day1.html" style="text-decoration: none;">&nbsp;&nbsp;&nbsp;#20DaysOfReact</a>
       </h3>
+      <div class="slider-container">
+        <div class="slider"></div>
+        <div class="navigation"></div>
+      </div>
+      <p>JavaScript String methods cheat sheet:</p>
+      <img src="../Images/tip_6.jpeg" alt="tip_6 image">
+      <p>Use triple equals operator (===) when you want to check both equality of value and data types.</p>
+      <img src="../Images/tip_5.jpeg" alt="tip_5 image">
+      <p>
+            You can use the JavaScript Set object to combine multiple arrays.
+            <pre>
+                  <code>
+                        const array1 = [1,2,3];
+                        const array2 = [3,4,5];
+
+                        const mergedSet = new Set([...array1, ...array2]);
+
+                        console.log(mergedSet);
+                  </code>
+                  <code>
+                        Outputs: Set(5) {1, 2, 3, 4, 5}
+                  </code>
+            </pre>
+      </p>
       <h4>Top 60+ JavaScript Interview Questions and Answers</h4>
       <p>
             <pre>
@@ -89,6 +114,79 @@
                   Since "22" is a string, and the minus sign (-) is for arithmetic operations, JavaScript attempts to convert the string to a number for the calculation2.(Type Conversion)It successfully converts "22" to the Number 22.22 - "2", Now we have a Number (22) and a String ("2"). JavaScript again attempts to convert the String "2" to a Number for the subtraction.It successfully converts "2" to the Number 2.The Number 22 is subtracted by Number 2.This results in the Number 20.The Number 20 is assigned to the variable x.Then final value of x, which is 20, is printed to the console.
 
             </pre>
+            <pre>
+                  <b>Question:7 </b><br>
+                  What is the output of the following code ? 
+                  <code>
+                        console .log(typeof NaN)
+                  </code>
+                  A."NaN"          B."string"
+                  C."number"       D."undefined"
+
+                  Answer : C.number
+                  Explanation: typeof Operator in JavaScript returns a string indicating the data type of the value it's applied to.
+                  NaN stands for "Not a Number." It's a special numeric value representing an invalid or undefined mathematical result.
+                  Even though NaN signifies a non-numerical value, JavaScript considers it a special type of number. The typeof operator prioritizes recognizing NaN as a number over other data types.
+
+            </pre>
+            <pre>
+                  <b>Question: 8</b><br>
+                  What does the NaN value represent in JavaScript ? 
+                  A."NaN"          B."Not a Number"
+                  C."number"       D."undefined"
+
+                  Answer : B.Not a Number
+                  Explanation: The NaN value in JavaScript represents 'Not a Number' and is returned when a mathematical operations fails to produce a valid number .
+
+            </pre>
+            <pre>
+                  <b>Question:9 </b><br>
+                  What is the output ? 
+                  <code>
+                        setTimeout(() =>{
+                              console.log(1);
+                        },0)
+                        queueMicrotask(() =>{
+                              console.log(2);
+                        })
+                        Promise.resolve().then(()=>{
+                              console.log(3);
+                        })
+                        console.log(4);
+                  </code>
+                  Answer : 4,2,3,1
+                  Explanation: This code demonstrates asynchronous behavior in JavaScript using different asynchronous APIs: setTimeout, queueMicrotask, and Promise.
+                  Here's the explanation step by step:
+                  <code>setTimeout(() => { console.log(1); }, 0)</code>: This sets up a timer to log 1 after 0 milliseconds. Even though it's supposed to run immediately, due to the asynchronous nature of setTimeout, it will be placed in the event queue and executed after the current synchronous code completes.
+                  <code>queueMicrotask(() => { console.log(2); })</code>: This adds a microtask to the microtask queue. Microtasks are executed after the current script finishes but before the browser continues to render. So, it will log 2 after the synchronous part of the current script.
+                  <code>Promise.resolve().then(() => { console.log(3); })</code>: This creates a resolved Promise and attaches a callback to it using then(). Since Promises use the microtask queue for their callbacks, it will log 3 after the microtask added by queueMicrotask().
+                  <code>console.log(4);</code>: This logs 4 immediately as it's a synchronous operation.
+                  So, the expected order of logging is: 4,3,2,1
+
+            </pre>
+            <pre>
+                  <b>Question:10</b><br>
+                  What is the output ?
+                  <code>
+                        const obj ={
+                              x : 10,
+                              y : 20
+                        };
+                        Object.freeze(obj);
+                        const newObj = obj;
+                        newObj.x = 50;
+                        newObj.y = 60;
+
+                        console.log(newObj.x);
+                        console.log(newObj.y);
+                  </code>
+                  Answer : 10 , 20
+                  Explanation:  Object.freeze(obj) freezes the object obj. This makes the object's properties immutable, meaning they cannot be added, deleted, or modified . 
+                  (const newObj = obj) creates a new constant variable named newObj and assigns it the reference to the existing object obj. This means that both obj and newObj point to the same object in memory. 
+                  So the answer is 10 and 20
+
+            </pre>
       </p>
+      <script src="script.js"></script>
 </body>
 </html>

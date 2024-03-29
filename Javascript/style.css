@@ -1,9 +1,40 @@
 pre{
       white-space: pre-line;
-      margin: 0;
-      padding: 0;
 }
-body{
-      margin: 0;
-      padding: 0;
+.slider-container {
+    width: 600px; /* Adjust width as needed */
+    margin: 0 auto; /* Center the slider horizontally */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.slider {
+    display: flex;
+}
+
+.slider img {
+    width: 100%; /* Images fill the slider width */
+    height: auto;
+}
+
+@keyframes slideShow {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-calc(100% * (images-1))); /* Adjust based on image count */
+    }
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+/* Style the navigation buttons (optional) */
+.navigation button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 20%;
 }

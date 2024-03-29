@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>#20DaysOfReact</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <h3>
+            <a href="../HTML/index.html" style="text-decoration: none;">HTML Tip💡</a>
+            <a href="../CSS/css.html" style="text-decoration: none;">&nbsp;&nbsp;&nbsp;CSS Tip💡</a>
+            <a href="../Javascript/javascript.html" style="text-decoration: none;">&nbsp;&nbsp;&nbsp;Javascript Tip💡</a>
+            <a href="../Git/git.html" style="text-decoration: none;">&nbsp;&nbsp;&nbsp;Git Tip💡</a>
+            <a href="Day1.html" style="text-decoration: none;">&nbsp;&nbsp;&nbsp;#20DaysOfReact</a>
+      </h3>
+      <a href="Day1.html" style="text-decoration: none;"><h4>DAY 1 of #20DaysOfReact</h4></a>
+      <a href="Day2.html" style="text-decoration: none;"><h4>DAY 2 of #20DaysOfReact</h4></a>
+      <a href="Day3.html" style="text-decoration: none;"><h4>DAY 3 of #20DaysOfReact</h4></a>
+      <br>
+      <h5>Topics Covered :</h5>
+      <ul>
+            <li>-Creating and rendering components</li>
+            <li>-Props</li>
+      </ul>
+      <p>
+            <h6>Creating and rendering components</h6>
+            <pre>
+
+                  <b>What are Components?</b>
+                  Components in React can be thought of as building blocks for building user interfaces. They are like reusable pieces of a web page that you can create and customize, and then you can put these pieces together to create a complete web application.
+                  Imagine you are building a web page, and you want to break it down into smaller, manageable parts. Each part could be a component. For example, you might have a component for the header of your page, another for a navigation menu, one for a product list, and so on. 
+                  In React, components are defined as JavaScript functions or classes that return JSX, describing what should be rendered on the screen.
+                  
+                  <b>Creating a Component:</b>
+                  React component names must start with a capital letter. there are two common ways to create a component: as a functional component or as a class component. 
+                  <b>1. Functional Component : </b>
+                  Functional components are simpler and more concise. These are simply like JavaScript functions.  
+                  <b>2. Class Component :</b>
+                  These components are simple classes (made up of multiple functions that add functionality to the application). All class components are child classes for the Component class of ReactJS. Class components are used when you need to manage component state or use lifecycle methods
+                  
+                  <b>What do you mean by rendering a component?</b>
+                  Rendering a component in React refers to the process of displaying or showing a component's user interface on a web page. In simpler terms, it means making the content and functionality defined within a React component visible to the user in a web application. 
+                  When you render a component, you are instructing React to take the component's description (typically written in JSX) and transform it into actual HTML elements that appear on the screen. To render a component: 
+                  include the file in the header of "App.js" and pass the props*. 
+                  Syntax : 
+                  <code>&lt;Component_name prop="value" &frasl;&gt;</code>
+
+            </pre>
+            <h6>Props</h6>
+            <pre>
+                  
+                  <b>What are Props?</b>
+                  In React, "props" is a shorthand for "properties," and they are a way to pass data from a parent component to a child component. Props allow you to customize and configure child components, making them dynamic and reusable.
+                  Props are read-only, meaning that child components cannot modify the data they receive via props. They are purely for receiving and using data.
+                  React Props are like function arguments in JavaScript and attributes in HTML.
+                  
+                  <b>How do you pass props between components?</b>
+                  <b>Parent (P): </b>You have a bag of candies, and you want to give some to your child.
+                  <b>Pass Props:</b> To pass candies, you put them in a small box (props), and you write your child's name (prop name) on the box. Then you hand the box to your child.
+                  <b>Child (C):</b> Your child receives the box with their name on it and opens it to find the candies (props) inside.
+                  In this example, the candies are like data, and the box with your child's name on it is like a prop. You use props to give information from the parent component to the child component in React.
+                  
+            </pre>
+            <h6>React Components and Props Best Practices</h6>
+            <pre>
+
+                  <b>1. Destructuring props:</b>
+                  Destructuring properties, a feature initially introduced in JavaScript ES6, empowers us to extract multiple properties from objects and assign them to distinct variables, all accomplished in concise code.
+
+                  <b>2. Limit the number of props passed to components: </b>
+                  Although props are a very helpful feature in React too much for a good thing is often bad, as is the case here. If lots of props are passed to a single component, it make that component hard to read and maintain down the line.
+
+                  <b>3. Keep components small and specific: </b>
+                  This is an important aspect of designing components in React because small, specific components are easier to maintain and understand than large components that encompassing lots of core functionality.
+            </pre>
+            <p>
+                  Here are some questions you can use to deepen your understanding of React components and props: <br>
+                  1. Create both a functional and a class component with the same functionality. <br>
+                  2. Can you nest one component inside another? Give it a try and create nested components. <br>
+                  3. What's the approach when passing props from a parent component at a very high level of hierarchy to a child component that is lower in the hierarchy? <br>
+                  Teaching these concepts to your peers can be incredibly beneficial, as it's one of the best ways to solidify your own understanding.
+            </p>
+            <pre>
+                  That's it for Day 1! <a href="Day3.html">Click here</a> for the next day, or check out some resources below.
+            </pre>
+      </p>
+</body>
+</html>
